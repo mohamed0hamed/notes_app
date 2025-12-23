@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/views/widgets/constants.dart';
 class CustomTextField extends StatelessWidget {
-   CustomTextField({super.key ,this.hintText , this.onSubmitted , this.maxlines = 1});
+ const CustomTextField({super.key ,this.hintText , this.onSubmitted , this.maxlines = 1});
  final String? hintText;
  final int maxlines;
- Function (String value)? onSubmitted;
+ final Function (String value)? onSubmitted;
   @override
   Widget build(BuildContext context) {
     return TextField(
