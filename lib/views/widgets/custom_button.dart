@@ -11,7 +11,7 @@ final VoidCallback? onTap;
       child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
-                  color: KprimaryColor
+                  color: kprimaryColor
                 ),
                 width: MediaQuery.of(context).size.width,
                 height: 50,
