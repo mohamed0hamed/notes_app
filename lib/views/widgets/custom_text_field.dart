@@ -26,14 +26,14 @@ class CustomTextField extends StatelessWidget {
             hintStyle: TextStyle(
               color: kprimaryColor
             ),
-            border: BuildBorder(),
-            enabledBorder: BuildBorder(),
-            focusedBorder: BuildBorder(kprimaryColor)
+            border: buildBorder(),
+            enabledBorder: buildBorder(),
+            focusedBorder: buildBorder(kprimaryColor)
           ),
         );
   }
 
-  OutlineInputBorder BuildBorder([Color]) {
+  OutlineInputBorder buildBorder ([Color]) {
     return OutlineInputBorder(
              borderRadius: BorderRadius.circular(16),
             borderSide: BorderSide(
