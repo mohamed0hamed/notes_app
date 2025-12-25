@@ -13,7 +13,7 @@ void fetchAllNotes()
   {
   var noteBox = Hive.box<NoteModel>(knoteBox);
   notes = noteBox.values.toList();
-  
+  emit(NotesSuccess());
   }
   
 }
