@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/views/widgets/constants.dart';
 class CustomTextField extends StatelessWidget {
- const CustomTextField({super.key ,this.hintText , this.onsaved , this.maxlines = 1});
+ const CustomTextField({super.key ,this.hintText , this.onsaved , this.maxlines = 1, this.onChanged});
  final String? hintText;
  final int maxlines;
  final void Function(String?value )? onsaved;
+ final void Function(String value)? onChanged;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged:onChanged ,
       maxLines: maxlines,
       cursorColor: kprimaryColor,
       onSaved: onsaved  ,
