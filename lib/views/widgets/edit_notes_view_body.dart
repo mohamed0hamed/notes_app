@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
+import 'package:notes_app/helper/show_snack_bar.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/widgets/custom_app_bar.dart';
 import 'package:notes_app/views/widgets/custom_text_field.dart';
@@ -30,6 +31,7 @@ String ? title , content ;
               widget.note.title = title ?? widget.note.title;
               widget.note.subtitle = content ?? widget.note.subtitle;
               widget.note.save();
+              ShowSnackBar(context, 'Edit note is success');
               BlocProvider.of<NotesCubit>(context).fetchAllNotes();
               Navigator.pop(context);
               
