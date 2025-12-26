@@ -39,14 +39,14 @@ String ? title , content ;
             onChanged: (value) {
               title = value ;
             },
-            hintText: 'Title',
+            hintText: widget.note.title,
           ),
           SizedBox(height: 16,),
           CustomTextField(
             onChanged: (value) {
               content = value ;
             },
-            hintText: 'Content',
+            hintText: widget.note.subtitle,
             maxlines: 5,
           ),
         ],
